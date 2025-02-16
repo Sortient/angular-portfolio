@@ -1,7 +1,3 @@
-
-/* ===============================================
-   Global Variables & Base Styles (Dark Theme)
-   =============================================== */
    :root {
     --primary-color: #4a8b53;
     --secondary-color: #00acc1;
@@ -35,7 +31,6 @@
     padding-right: 1rem;
   }
   
-  /* Utility spacing classes */
   .mt-5 {
     margin-top: 3rem !important;
   }
@@ -169,3 +164,5 @@
   @keyframes blink {
     50% { opacity: 0; }
   }
+
+  

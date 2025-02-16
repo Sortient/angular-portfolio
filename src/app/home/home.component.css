@@ -1,10 +1,38 @@
 .carousel-item {
-    height: 500px; /* Set the desired height */
+    height: 500px;
   }
   
-  /* Ensure images cover the container without distortion */
   .carousel-item img {
     height: 100%;
     width: 100%;
     object-fit: cover;
+  }
+
+  @media (max-width: 576px) {
+    .jumbotron h1.display-4 {
+      font-size: 2rem;
+    }
+    .jumbotron p.lead,
+    .jumbotron p {
+      font-size: 0.9rem;
+    }
+    
+    .devicon-cplusplus-plain,
+    .devicon-csharp-plain,
+    .devicon-dot-net-plain,
+    .devicon-java-plain,
+    .devicon-angular-plain,
+    .devicon-python-plain,
+    .devicon-sqlite-plain,
+    .devicon-godot-plain,
+    .devicon-jenkins-plain,
+    .devicon-typescript-plain,
+    .devicon-gimp-plain,
+    .devicon-photoshop-plain {
+      font-size: 3rem;
+    }
+
+    .container.py-4 {
+      padding: 1rem;
+    }
   }
