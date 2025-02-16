@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Project } from '../models/project';
 
 @Component({
   selector: 'app-portfolio',
@@ -7,7 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './portfolio.component.css'
 })
 export class PortfolioComponent {
-  projects = [
+  projects: Project[] = [
     {
       id: 1,
       title: 'Python Comment Analysis App',
@@ -25,7 +26,7 @@ export class PortfolioComponent {
     {
       id: 3,
       title: "Caisteal nam Marbh",
-      description: "A WWII-themed Call of Duty: Black Ops 3 Zombies map, set in an abandoned castle in the Scottish Highlands.",
+      description: "A WWII-themed Call of Duty: Black Ops 3 Zombies map, set in the ruins of a castle in the Scottish Highlands.",
       link: "https://steamcommunity.com/sharedfiles/filedetails/?id=3406897906",
       image: "zombies_map.png"
     },
