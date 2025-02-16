@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { RouterLinkActive, RouterOutlet, RouterLink } from '@angular/router';
+declare var bootstrap: any; 
 
 @Component({
   selector: 'app-header',
@@ -14,6 +15,17 @@ import { RouterLinkActive, RouterOutlet, RouterLink } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
-export class HeaderComponent {
+export class HeaderComponent implements AfterViewInit {
+  @ViewChild('navbarNav') navbarNav!: ElementRef;
+  private bsCollapse: any;
 
+  ngAfterViewInit() {
+    this.bsCollapse = new bootstrap.Collapse(this.navbarNav.nativeElement, { toggle: false });
+  }
+
+  collapseNav() {
+    if (this.bsCollapse && this.navbarNav.nativeElement.classList.contains('show')) {
+      this.bsCollapse.hide();
+    }
+  }
 }
