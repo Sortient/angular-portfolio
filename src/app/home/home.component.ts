@@ -10,7 +10,7 @@ export class HomeComponent {
   fullText: string = "Hi, I'm Owen.";
   displayText: string = '';
   index: number = 0;
-  typingSpeed: number = 150; // speed in milliseconds per character
+  typingSpeed: number = 150;
 
   ngOnInit(): void {
     const intervalId = setInterval(() => {
