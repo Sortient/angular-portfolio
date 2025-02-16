@@ -1,0 +1,29 @@
+.nav-link {
+    color: #ffffff;
+}
+
+.nav-link.active {
+    color: #ffffff;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar.navbar-default {
+    background-color: #1f1f1f;
+}
+
+.navbar-brand {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: #f8f9fa;
+}
+
+.nav-link:hover {
+    color: #000000; /* e.g., primary Bootstrap blue */
+    background-color: #e2e6ea; /* a light gray background */
+    transition: background-color 0.1s ease-in-out;
+  }

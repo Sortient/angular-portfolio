@@ -1,0 +1,20 @@
+<div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <div class="container">
+        <h1 class="text-center mb-4">My Projects</h1>
+        <p class="text-center mb-4">Here are some of the projects I have worked on. I hope to add more as time goes on!</p>
+        <div class="projects row g-4">
+        @for (project of projects; track project.id) {
+            <div class="col-md-6 col-lg-4">
+            <div class="card h-100">
+                <div class="card-body">
+                <h5 class="card-title">{{project.title}}</h5>
+                <p class="card-text">{{project.description}}</p>
+                <img class="d-block w-100 mb-3" src={{project.image}} alt="project.title">
+                <a href="{{project.link}}" class="btn btn-primary">View Project</a>
+                </div>
+            </div>
+            </div>
+        }
+        </div>
+    </div>
+</div>
