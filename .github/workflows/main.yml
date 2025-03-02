@@ -47,29 +47,37 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     # if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    permissions:
+      contents: write
     
     steps:
     - name: Checkout
       uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
     
     - name: Extract version from package.json
       id: package_version
       run: echo "VERSION=$(node -p "require('./package.json').version")" >> $GITHUB_ENV
     
-    - name: Create Release
-      id: create_release
-      uses: softprops/action-gh-release@v1
+    - name: Create Tag and Release
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        # Check if tag already exists
+        if ! git rev-parse v${{ env.VERSION }} >/dev/null 2>&1; then
+          git tag -a v${{ env.VERSION }} -m "Release v${{ env.VERSION }}"
+          git push origin v${{ env.VERSION }}
+          
+          # Create release using GitHub CLI
+          gh release create v${{ env.VERSION }} \
+            --title "Release v${{ env.VERSION }}" \
+            --notes "Release version ${{ env.VERSION }}\n\nAutomated release created by GitHub Actions."
+        else
+          echo "Tag v${{ env.VERSION }} already exists. Skipping tag and release creation."
+        fi
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        tag_name: v${{ env.VERSION }}
-        release_name: Release v${{ env.VERSION }}
-        draft: false
-        prerelease: false
-        body: |
-          Release version ${{ env.VERSION }}
-          
-          Automated release created by GitHub Actions.
 
   docker:
     needs: release
