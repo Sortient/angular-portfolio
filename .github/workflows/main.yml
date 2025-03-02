@@ -2,9 +2,9 @@ name: Build, Create Release and Push Docker Image
 
 on:
   push:
-    branches: [ "master" ]
+    branches: []
   pull_request:
-    branches: [ "master", ]
+    branches: [ "master" ]
   workflow_dispatch:
 
 jobs:
@@ -110,3 +110,5 @@ jobs:
           ${{ secrets.DOCKER_USERNAME }}/angular-portfolio:v${{ env.VERSION }}
         cache-from: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/angular-portfolio:buildcache
         cache-to: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/angular-portfolio:buildcache,mode=max
+    
+    
