@@ -1,8 +1,8 @@
-name: Build, Release and Docker
+name: Build, Create Release and Push Docker Image
 
 on:
   push:
-    branches: [ "master", "6-create-integrated-docker-and-github-actions-workflow" ]
+    branches: [ "master" ]
   pull_request:
     branches: [ "master", ]
   workflow_dispatch:
@@ -46,7 +46,7 @@ jobs:
   release:
     needs: build
     runs-on: ubuntu-latest
-    # if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     permissions:
       contents: write
     
@@ -64,15 +64,14 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        # Check if tag already exists
+
         if ! git rev-parse v${{ env.VERSION }} >/dev/null 2>&1; then
           git tag -a v${{ env.VERSION }} -m "Release v${{ env.VERSION }}"
           git push origin v${{ env.VERSION }}
           
-          # Create release using GitHub CLI
           gh release create v${{ env.VERSION }} \
             --title "Release v${{ env.VERSION }}" \
-            --notes "Release version ${{ env.VERSION }}\n\nAutomated release created by GitHub Actions."
+            --notes "Release version ${{ env.VERSION }}"
         else
           echo "Tag v${{ env.VERSION }} already exists. Skipping tag and release creation."
         fi
@@ -82,7 +81,7 @@ jobs:
   docker:
     needs: release
     runs-on: ubuntu-latest
-    # if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     
     steps:
     - name: Checkout
