@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { version } from '../../../package.json';
 
 @Component({
@@ -7,7 +7,7 @@ import { version } from '../../../package.json';
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css'
 })
-export class FooterComponent {
+export class FooterComponent implements OnInit {
   
   githubUrl: string = 'https://www.github.com/Sortient';
   linkedinUrl: string = 'https://www.linkedin.com/in/owen-sortwell-2b4332169/';

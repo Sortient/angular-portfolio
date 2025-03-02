@@ -49,6 +49,13 @@ export class PortfolioComponent {
       description: 'A research project on the quality of code review comments and how they impact the transfer of knowledge to junior devs, and the overall culture of a project/team. Published in MDPI Software in November 2024',
       link: 'https://www.mdpi.com/2674-113X/3/4/25',
       image: "code-reviews-paper.png"
+    },
+    {
+      id: 7,
+      title: 'Engineering Toolkit',
+      description: 'A toolkit for software engineers with helpful tools such as a colour picker, GUID converter and more. Built full CI/CD pipeline with GitHub Actions.',
+      link: '#',
+      image: "eng-toolkit.png"
     }
   ]
 }

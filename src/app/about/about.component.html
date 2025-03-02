@@ -1,25 +1,201 @@
-<div class="d-flex justify-content-center align-items-center" style="height: 90vh;">
-<div class="container my-5">
+<div class="about-container">
+  <div class="container py-5">
     <header class="text-center mb-5">
-      <h1 class="display-4 ">Owen Sortwell</h1>
-      <p class="lead">Graduate Software Engineer</p>
+      <h1 class="display-4">About Me</h1>
+      <div class="separator"></div>
     </header>
-    <section id="about" class="row justify-content-center mb-4">
-      <h3 class="mb-3">About Me</h3>
-      <p>
-        I'm a {{currentAge}} year old software engineer, originally from Derry in Northern Ireland but now based in Edinburgh, Scotland, having moved here after graduating in 2023.</p> 
-      <p>
-          I found my passion for software development when I started modding games as a teenager. I was about 12 when I created an (admittedly rubbish) custom map for Call of Duty 4: Modern Warfare. I've been hooked ever since.
-      </p>
-      <p>
-        In my free time I love music - particularly anything rock/metal - and really enjoy playing guitar and singing.
-      </p>
-      <h3 class="mb-3">Education</h3>
-      <p>
-        MEng Computer Science at Queen's Unversity Belfast
-      </p>
-      <h3 class="mb-3">Skills</h3>
+
+    <!-- Bio Section -->
+    <section class="bio-section mb-5">
+      <div class="row">
+        <div class="col-md-4 mb-4 mb-md-0">
+          <div class="profile-container">
+            <div class="profile-placeholder d-flex justify-content-center align-items-center">
+              <img src="me.jpg" alt="Owen Sortwell" class="profile-image" />
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="bio-content">
+            <h2 class="mb-3">Owen Sortwell</h2>
+            <p class="lead mb-3">Software Engineer based in Edinburgh</p>
+            <p>I'm a {{currentAge}} year old software engineer based in Edinburgh, having moved here after graduating in 2023.</p>
+            <p>I found my passion for programming when I started modding games as a teenager. I was about 12 when I created a (really terrible) custom map for Call of Duty 4: Modern Warfare, and I've been hooked ever since!</p>
+            <p>In my free time I love music - particularly anything rock/metal - and really enjoy playing guitar and singing. I'm also a huge ice hockey fan and love gaming, particularly Sid Meier's Civilization.</p>
+            <div class="social-links mt-4">
+              <a href="https://github.com/Sortient" target="_blank" class="social-link">
+                <i class="devicon-github-original"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/owen-sortwell-2b4332169/" target="_blank" class="social-link">
+                <i class="devicon-linkedin-plain"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
+    <section class="cv-section">
+      <h2 class="section-title mb-4">My Experience</h2>
+      <div class="accordion-container">
+        <mat-accordion multi="true">
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Professional Experience
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="panel-content">
+              <div class="experience-item">
+                <h3>Software Engineer</h3>
+                <p class="position-details">BAE Systems • Edinburgh • 2023 - Present</p>
+                <p>Working primarily with .NET technologies on a variety of projects including:</p>
+                <ul>
+                  <li>CI/CD Pipeline Development: Creating CI/CD pipelines for proprietary products using Jenkins.</li>
+                  <li>Software Redesign: Transforming a full C++ MFC application into a modern C#/WPF frontend with a C++ backend.</li>
+                  <li>Full-Stack Development: Creating a .NET bridge tool that hooks into an Angular frontend.</li>
+                </ul>
+                <p>Active member of a Mental Health employee resource group, representing the graduate community on the leadership team and delivering talks within the organisation on the topic of mental health.</p>
+                <div class="tech-used">
+                  <span class="tech-badge">.NET</span>
+                  <span class="tech-badge">C#</span>
+                  <span class="tech-badge">Angular</span>
+                  <span class="tech-badge">Jenkins</span>
+                  <span class="tech-badge">WPF</span>
+                </div>
+              </div>
+              <div class="experience-item">
+                <h3>Industrial Placement Engineer</h3>
+                <p class="position-details">BAE Systems • Edinburgh • 2020 - 2021</p>
+                <p>Industrial placement during my 3rd year of university.</p>
+                <ul>
+                  <li>Completed a full database redesign project, transforming a database from a flat file system to a fully relational SQLite database.</li>
+                </ul>
+                <div class="tech-used">
+                  <span class="tech-badge">Delphi</span>
+                  <span class="tech-badge">SQLite</span>
+                </div>
+              </div>
+              <div class="experience-item">
+                <h3>Summer Intern</h3>
+                <p class="position-details">BAE Systems • Edinburgh • June 2019 - September 2019</p>
+                <p>Summer internship after my first year of university. Delivered a C#/WinForms virtual reality demonstrator.</p>
+                <ul>
+                  <li>Learned about the software lifecycle from requirements gathering through to testing.</li>
+                  <li>Travelled to partner and customer sites.</li>
+                </ul>
+                <div class="tech-used">
+                  <span class="tech-badge">C#</span>
+                  <span class="tech-badge">UML</span>
+                  <span class="tech-badge">WinForms</span>
+                </div>
+              </div>
+            </div>
+          </mat-expansion-panel>
+
+          <!-- Education -->
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Education
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="panel-content">
+              <div class="education-item">
+                <h3>MEng Computer Science</h3>
+                <p class="position-details">Queen's University Belfast • 2018 - 2023</p>
+                <p>Graduated with a 2:1. For my final year research project, I co-authored <em>Analysing Quality Metrics and Automated Scoring of Code Reviews</em>, a paper published in 2024 analysing the quality of code review comments.</p>
+              </div>
+            </div>
+          </mat-expansion-panel>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Skills
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="panel-content">
+              <div class="skills-container">
+                <div class="skill-category">
+                  <h3>Languages</h3>
+                  <div class="skill-tags">
+                    <span class="skill-tag">C#</span>
+                    <span class="skill-tag">C++</span>
+                    <span class="skill-tag">TypeScript</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">Java</span>
+                  </div>
+                </div>
+                <div class="skill-category">
+                  <h3>Frameworks & Technologies</h3>
+                  <div class="skill-tags">
+                    <span class="skill-tag">.NET</span>
+                    <span class="skill-tag">Angular</span>
+                    <span class="skill-tag">WPF</span>
+                    <span class="skill-tag">WinForms</span>
+                    <span class="skill-tag">Bootstrap</span>
+                    <span class="skill-tag">Jenkins</span>
+                    <span class="skill-tag">Docker</span>
+                  </div>
+                </div>
+                <div class="skill-category">
+                  <h3>Tools & Software</h3>
+                  <div class="skill-tags">
+                    <span class="skill-tag">Visual Studio</span>
+                    <span class="skill-tag">VS Code</span>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">TortoiseGit</span>
+                    <span class="skill-tag">Photoshop</span>
+                    <span class="skill-tag">CMake</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </mat-expansion-panel>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Interests & Hobbies
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="panel-content">
+              <div class="interests-container">
+                <div class="interest-item">
+                  <h3>Game Modding</h3>
+                  <p>Creating custom maps and mods for games like Call of Duty and Civilization. Recently published "Caisteal nam Marbh," a WWII-themed Call of Duty: Black Ops 3 Zombies map set in the ruins of a castle in the Scottish Highlands.</p>
+                </div>
+                <div class="interest-item">
+                  <h3>Music</h3>
+                  <p>Playing guitar and singing, with a particular focus on rock and metal. Enjoy both performing and recording music in my free time.</p>
+                </div>
+                <div class="interest-item">
+                  <h3>Gaming</h3>
+                  <p>Passionate about video games across various genres. Particularly enjoy strategy games, first-person shooters, and RPGs.</p>
+                </div>
+              </div>
+            </div>
+          </mat-expansion-panel>  
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Languages Spoken
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="panel-content">
+              <div class="skills-container">
+                <div class="skill-category">
+                  <div class="skill-tags">
+                    <span class="skill-tag">English: Native</span>
+                    <span class="skill-tag">French: B2</span>
+                    <span class="skill-tag">German: Elementary</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+    </section>
   </div>
 </div>
