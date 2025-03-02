@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { version } from '../../../package.json';
 
 @Component({
   selector: 'app-footer',
@@ -13,6 +14,7 @@ export class FooterComponent {
   initialYear: string = '2025';
   currentYear!: string;
   copyrightYears!: string;
+  appVersion: string = version;
 
   ngOnInit(): void {
     this.currentYear = new Date().getFullYear().toString();
