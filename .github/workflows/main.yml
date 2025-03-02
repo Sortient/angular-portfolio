@@ -2,7 +2,7 @@ name: Build, Create Release and Push Docker Image
 
 on:
   push:
-    branches: []
+    branches: ["master" ]
   pull_request:
     branches: [ "master" ]
   workflow_dispatch:
