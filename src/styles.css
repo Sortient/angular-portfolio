@@ -1,168 +1,184 @@
-   :root {
-    --primary-color: #4a8b53;
-    --secondary-color: #00acc1;
-    --accent-color: #ff5252;
-    --background-color: #121212;
-    --surface-color: #1e1e1e;
-    --text-color: #e0e0e0;        
-    --font-base: 'Roboto', sans-serif;
-    --heading-weight: 700;
-    --transition-speed: 0.3s;
-  }
+:root {
+  /* Gaming-inspired color palette */
+  --primary-color: #6d44b8;      /* Rich purple */
+  --secondary-color: #18b0ff;    /* Bright blue accent */
+  --dark-bg: #121212;            /* Dark background */
+  --darker-bg: #0a0a0a;          /* Darker sections */
+  --text-primary: #e6e6e6;       /* Light text */
+  --text-secondary: #b3b3b3;     /* Muted text */
+  --accent-color: #ff6b4a;       /* Orange accent for highlights */
+  --success-color: #00c896;      /* Green for success states */
   
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: var(--font-base);
-    color: var(--text-color);
-    background-color: var(--background-color);
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-  }
-  
-  .container,
-  .container-fluid {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  
-  .mt-5 {
-    margin-top: 3rem !important;
-  }
-  
-  .mb-5 {
-    margin-bottom: 3rem !important;
-  }
-  
+  /* Font families */
+  --heading-font: 'Rajdhani', sans-serif;  /* Gaming-inspired headings */
+  --body-font: 'Rubik', sans-serif;        /* Clean modern body text */
+  --code-font: 'JetBrains Mono', monospace; /* Monospace for code sections */
+}
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-base);
-    font-weight: var(--heading-weight);
-    margin-bottom: 1rem;
-    line-height: 1.2;
-    color: var(--text-color);
-  }
-  
-  p {
-    margin-bottom: 1.25rem;
-    color: var(--text-color);
-  }
-  
+/* Global styles */
+body {
+  background-color: var(--dark-bg);
+  color: var(--text-primary);
+  font-family: var(--body-font);
+  line-height: 1.6;
+}
 
-  a {
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: color var(--transition-speed) ease;
-  }
-  
-  a:hover {
-    color: var(--secondary-color);
-  }
-  
-  .btn-primary {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-    border-radius: 0.25rem;
-    transition: background-color var(--transition-speed) ease, border-color var(--transition-speed) ease;
-    color: var(--text-color);
-  }
-  
-  .btn-primary:hover,
-  .btn-primary:focus {
-    background-color: var(--secondary-color);
-    border-color: var(--secondary-color);
-  }
-  
-  .navbar {
-    background-color: var(--surface-color);
-    border-bottom: 1px solid #333;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
-  }
-  
-  .navbar-brand {
-    font-weight: var(--heading-weight);
-    font-size: 1.5rem;
-    color: var(--primary-color);
-  }
-  
-  .nav-link {
-    color: var(--text-color);
-    transition: color var(--transition-speed) ease;
-  }
-  
-  .nav-link:hover {
-    color: var(--primary-color);
-  }
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  font-weight: 600;
+}
 
-  .card {
-    background-color: var(--surface-color);
-    border: none;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
-    transition: transform var(--transition-speed) ease;
-  }
-  
-  .card:hover {
-    transform: translateY(-10px);
-  }
-  
+/* Custom button styles */
+.btn-custom-primary {
+  background-color: var(--primary-color);
+  border: none;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+}
 
-  .mat-toolbar {
-    background-color: var(--primary-color) !important;
-    color: var(--text-color) !important;
-    font-family: var(--font-base);
-  }
-  
-  .form-control {
-    background-color: var(--surface-color);
-    color: var(--text-color);
-    border-radius: 0.25rem;
-    border: 1px solid #333;
-    transition: border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
-  }
-  
-  .form-control:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 0.2rem rgba(13, 71, 161, 0.25);
-  }
+.btn-custom-primary:hover {
+  background-color: #7e55c9;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(109, 68, 184, 0.4);
+}
 
-  .footer {
+.btn-custom-primary:active {
+  transform: translateY(0);
+}
+
+/* Card styling */
+.custom-card {
+  background-color: var(--darker-bg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.custom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border-color: var(--secondary-color);
+}
+
+/* Section styling */
+.section-container {
+  padding: 4rem 0;
+  position: relative;
+}
+
+/* Glowing accents for sections */
+.glow-accent {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  filter: blur(80px);
+  opacity: 0.15;
+  z-index: 0;
+}
+
+/* Animated typing cursor */
+.cursor {
+  display: inline-block;
+  width: 3px;
+  background-color: var(--secondary-color);
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Section dividers with gaming-inspired patterns */
+.section-divider {
+  height: 5px;
+  background: linear-gradient(90deg, transparent, var(--primary-color), var(--secondary-color), transparent);
+  margin: 3rem 0;
+}
+
+/* Skill icon containers */
+.skill-icon-container {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.skill-icon-container:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+}
+
+.skill-icon-container i {
+  font-size: 3.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+/* Navbar customization */
+.custom-navbar {
+  background-color: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-link {
+  position: relative;
+  padding: 0.5rem 1rem;
+  margin: 0 0.25rem;
+  color: var(--text-secondary) !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-link:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--secondary-color);
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--text-primary) !important;
+}
+
+.nav-link:hover:before {
+  width: 80%;
+  left: 10%;
+}
+
+.nav-link.active {
+  color: var(--secondary-color) !important;
+}
+
+.nav-link.active:before {
+  width: 80%;
+  left: 10%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  :root {
+    --heading-font-size: 2rem;
+  }
+  
+  .section-container {
     padding: 2rem 0;
-    background-color: var(--surface-color);
-    text-align: center;
-    border-top: 1px solid #333;
-    margin-top: 3rem;
-    color: var(--text-color);
   }
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  ul {
-    list-style: none;
-    padding-left: 0;
-  }
-  
-  hr {
-    border: 0;
-    border-top: 1px solid #333;
-    margin: 2rem 0;
-  }
-  
-  .cursor {
-    display: inline-block;
-    animation: blink 1s step-start infinite;
-  }
-  
-  @keyframes blink {
-    50% { opacity: 0; }
-  }
-
-  
+}

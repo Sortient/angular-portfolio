@@ -1,29 +1,269 @@
-/* Custom Fonts and Colors */
-.custom-title {
-    font-family: 'Roboto', sans-serif;
-    color: #2c3e50;
+.about-container {
+  padding-top: 80px;
+  min-height: 100vh;
+  background-color: #121212;
+  color: #e6e6e6;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Header styling */
+.display-4 {
+  font-family: 'Rajdhani', 'Roboto', sans-serif;
+  font-weight: 700;
+  color: #e6e6e6;
+  margin-bottom: 1.5rem;
+}
+
+.separator {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #6d44b8, #18b0ff);
+  margin: 0 auto;
+}
+
+/* Bio section styling */
+.bio-section {
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+}
+
+.profile-container {
+  position: relative;
+  width: 100%;
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+.profile-image {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 25px rgba(109, 68, 184, 0.5);
+}
+
+.bio-content h2 {
+  font-family: 'Rajdhani', 'Roboto', sans-serif;
+  font-weight: 700;
+  color: #e6e6e6;
+}
+
+.lead {
+  color: #18b0ff;
+  font-size: 1.2rem;
+}
+
+.bio-content p {
+  color: #b3b3b3;
+  margin-bottom: 1rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.07);
+  color: #ffffff;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  background-color: #6d44b8;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(109, 68, 184, 0.3);
+}
+
+.social-link i {
+  font-size: 1.3rem;
+}
+
+/* CV section styling */
+.cv-section {
+  margin-top: 4rem;
+}
+
+.section-title {
+  font-family: 'Rajdhani', 'Roboto', sans-serif;
+  font-weight: 600;
+  color: #e6e6e6;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title:after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background-color: #18b0ff;
+  bottom: -10px;
+  left: 0;
+}
+
+/* Angular Material accordion styling */
+::ng-deep .mat-expansion-panel {
+  background-color: rgba(255, 255, 255, 0.03) !important;
+  color: #e6e6e6 !important;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px !important;
+}
+
+::ng-deep .mat-expansion-panel-header {
+  padding: 1.25rem !important;
+}
+
+::ng-deep .mat-expansion-panel-header-title {
+  color: #e6e6e6 !important;
+  font-family: 'Rajdhani', 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+::ng-deep .mat-expansion-panel-body {
+  padding: 1.5rem !important;
+}
+
+::ng-deep .mat-expansion-indicator::after {
+  color: #18b0ff !important;
+}
+
+/* Panel content styling */
+.panel-content {
+  color: #b3b3b3;
+}
+
+.panel-content h3 {
+  color: #e6e6e6;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.position-details {
+  color: #18b0ff;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.experience-item, .education-item, .interest-item, .project-item {
+  margin-bottom: 2rem;
+}
+
+.experience-item:last-child, .education-item:last-child, .interest-item:last-child, .project-item:last-child {
+  margin-bottom: 0;
+}
+
+ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Tech badges */
+.tech-used {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 1rem;
+}
+
+.tech-badge {
+  background-color: rgba(109, 68, 184, 0.15);
+  color: #18b0ff;
+  padding: 0.3rem 0.7rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  display: inline-block;
+}
+
+/* Skills section */
+.skill-category {
+  margin-bottom: 2rem;
+}
+
+.skill-category h3 {
+  font-size: 1.1rem;
+  color: #e6e6e6;
+  margin-bottom: 1rem;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-tag {
+  background-color: rgba(255, 255, 255, 0.07);
+  color: #e6e6e6;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+  background-color: rgba(109, 68, 184, 0.3);
+  transform: translateY(-3px);
+}
+
+/* Project links */
+.project-link {
+  display: inline-block;
+  color: #18b0ff;
+  margin-top: 0.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.project-link:hover {
+  color: #6d44b8;
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .profile-container {
+    margin-bottom: 2rem;
   }
   
-  .custom-subtitle {
-    font-family: 'Open Sans', sans-serif;
-    color: #34495e;
+  .display-4 {
+    font-size: 2.5rem;
   }
   
-  /* Card Styling */
-  .custom-card {
-    background-color: #f8f9fa;
-    border: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  .bio-section,
+  .panel-content {
+    padding: 1.5rem;
   }
   
-  /* Override Bootstrap Button */
-  .btn-primary {
-    background-color: #3498db;
-    border-color: #3498db;
+  .skill-tag {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
   }
-  
-  .btn-primary:hover {
-    background-color: #2980b9;
-    border-color: #2980b9;
-  }
-  
+}

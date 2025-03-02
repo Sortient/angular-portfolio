@@ -1,29 +1,86 @@
-.nav-link {
-    color: #ffffff;
-}
-
-.nav-link.active {
-    color: #ffffff;
-}
-
-.navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar.navbar-default {
-    background-color: #1f1f1f;
-}
-
-.navbar-brand {
-    font-family: 'Courier New', Courier, monospace;
+.custom-navbar {
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar-brand {
+    font-family: var(--code-font);
     font-weight: bold;
-    color: #f8f9fa;
-}
-
-.nav-link:hover {
-    color: #000000; /* e.g., primary Bootstrap blue */
-    background-color: #e2e6ea; /* a light gray background */
-    transition: background-color 0.1s ease-in-out;
+    color: var(--text-primary) !important;
+    font-size: 1.4rem;
+  }
+  
+  .brand-first-letter {
+    color: var(--secondary-color);
+    font-weight: 700;
+  }
+  
+  .brand-separator {
+    color: var(--accent-color);
+    opacity: 0.8;
+    font-weight: normal;
+  }
+  
+  .brand-last-name {
+    color: var(--primary-color);
+  }
+  
+  .navbar-brand:hover .brand-separator {
+    animation: pulse 1.5s infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
+  }
+  
+  .nav-link {
+    color: var(--text-secondary) !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+  }
+  
+  .nav-link:hover {
+    color: var(--text-primary) !important;
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  
+  .nav-link.active {
+    color: var(--secondary-color) !important;
+    background-color: rgba(24, 176, 255, 0.1);
+  }
+  
+  .custom-toggler {
+    border: none;
+    padding: 0.25rem;
+  }
+  
+  .custom-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(109, 68, 184, 0.25);
+  }
+  
+  /* Scrolled state for navbar */
+  .navbar-scrolled {
+    background-color: rgba(10, 10, 10, 0.95);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    padding: 0.5rem 0;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 991px) {
+    .navbar-collapse {
+      background-color: var(--darker-bg);
+      border-radius: 8px;
+      padding: 1rem;
+      margin-top: 1rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    .nav-link {
+      padding: 0.75rem 1rem;
+      margin: 0.25rem 0;
+    }
   }
